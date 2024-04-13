@@ -6,7 +6,7 @@ from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
 
 #Вход через лавную страницу
-driver = conftest.get_driver()
+driver = webdriver.Chrome()
 driver.get("https://stellarburgers.nomoreparties.site/")
 #Ожидание секции "Кноструктор"
 WebDriverWait(driver, 30).until(expected_conditions.element_to_be_clickable((By.XPATH, './/h1[@class="text text_type_main-large mb-5 mt-10"]')))
